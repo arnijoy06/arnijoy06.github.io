@@ -1,0 +1,210 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Laarni Joy Crescencio | Freelance Administrative Support</title>
+<meta name="description" content="Laarni Joy Crescencio — Administrative Assistant, Transcription & Data Entry Specialist, and Virtual Administrative Support.">
+<style>
+:root{
+  --navy:#17324d; --teal:#3d7c7a; --sage:#dce9e5; --cream:#f8f4ec;
+  --gold:#c59a5a; --ink:#17202a; --muted:#66727d; --white:#fff;
+  --line:#dbe2df; --shadow:0 18px 50px rgba(23,50,77,.10);
+}
+*{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth}
+body{font-family:Inter,Segoe UI,Arial,sans-serif;color:var(--ink);background:#fff;line-height:1.65}
+a{text-decoration:none;color:inherit}
+.container{width:min(1120px,92%);margin:auto}
+nav{position:fixed;top:0;left:0;right:0;z-index:20;background:rgba(255,255,255,.92);backdrop-filter:blur(12px);border-bottom:1px solid rgba(219,226,223,.7)}
+.nav-inner{height:72px;display:flex;align-items:center;justify-content:space-between}
+.logo{font-weight:800;letter-spacing:.08em;color:var(--navy)}
+.logo span{color:var(--gold)}
+.nav-links{display:flex;gap:28px;font-size:.92rem;color:var(--muted)}
+.nav-links a:hover{color:var(--teal)}
+.menu{display:none;border:0;background:none;font-size:1.5rem;color:var(--navy)}
+.hero{min-height:100vh;padding:150px 0 90px;background:
+ radial-gradient(circle at 85% 20%, rgba(220,233,229,.9), transparent 28%),
+ linear-gradient(135deg,var(--navy) 0%,#234a65 58%,#2f6768 100%);color:white;position:relative;overflow:hidden}
+.hero:after{content:"";position:absolute;width:330px;height:330px;border-radius:50%;right:-120px;bottom:-130px;background:rgba(197,154,90,.18)}
+.hero-grid{display:grid;grid-template-columns:1.15fr .85fr;gap:70px;align-items:center;position:relative;z-index:2}
+.kicker{font-size:.78rem;letter-spacing:.2em;text-transform:uppercase;color:#e9c98f;font-weight:800;margin-bottom:18px}
+h1{font-size:clamp(3rem,7vw,5.8rem);line-height:.98;letter-spacing:-.055em;margin-bottom:24px}
+.hero h1 span{color:#dce9e5}
+.hero-text{font-size:1.12rem;color:#e7eff0;max-width:650px;margin-bottom:32px}
+.btns{display:flex;gap:14px;flex-wrap:wrap}
+.btn{display:inline-flex;padding:13px 21px;border-radius:999px;font-weight:750;border:1px solid transparent;transition:.2s}
+.btn-primary{background:var(--gold);color:#fff}.btn-primary:hover{transform:translateY(-2px)}
+.btn-light{border-color:rgba(255,255,255,.45);color:white}.btn-light:hover{background:rgba(255,255,255,.1)}
+.hero-card{background:rgba(255,255,255,.10);border:1px solid rgba(255,255,255,.18);padding:30px;border-radius:28px;box-shadow:var(--shadow);backdrop-filter:blur(8px)}
+.initials{width:82px;height:82px;border-radius:24px;background:var(--cream);color:var(--navy);display:grid;place-items:center;font-size:1.8rem;font-weight:900;margin-bottom:25px}
+.hero-card h3{font-size:1.35rem;margin-bottom:9px}.hero-card p{color:#dbe8e9}
+.stat-row{display:grid;grid-template-columns:repeat(3,1fr);gap:10px;margin-top:25px}
+.stat{background:rgba(0,0,0,.12);border-radius:15px;padding:15px}.stat strong{display:block;font-size:1.15rem;color:#fff}.stat small{color:#cbdadc}
+section{padding:100px 0}
+.section-label{font-size:.76rem;letter-spacing:.18em;text-transform:uppercase;color:var(--teal);font-weight:850;margin-bottom:12px}
+h2{font-size:clamp(2rem,4vw,3.2rem);line-height:1.08;color:var(--navy);letter-spacing:-.04em;margin-bottom:18px}
+.lead{color:var(--muted);max-width:760px;font-size:1.05rem}
+.about{background:var(--cream)}
+.about-grid{display:grid;grid-template-columns:1fr 1fr;gap:55px;align-items:start}
+.value-box{background:white;border:1px solid var(--line);border-radius:25px;padding:30px;box-shadow:var(--shadow)}
+.value{padding:17px 0;border-bottom:1px solid var(--line)}.value:last-child{border-bottom:0}
+.value b{color:var(--navy);display:block;margin-bottom:4px}.value p{color:var(--muted);font-size:.93rem}
+.services-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:20px;margin-top:40px}
+.service{border:1px solid var(--line);border-radius:25px;padding:30px;background:#fff;transition:.25s}
+.service:hover{transform:translateY(-6px);box-shadow:var(--shadow)}
+.num{font-size:.75rem;color:var(--gold);font-weight:900;letter-spacing:.15em}.service h3{color:var(--navy);margin:12px 0 12px;font-size:1.15rem}.service p{color:var(--muted);font-size:.92rem}
+.service ul{list-style:none;margin-top:17px}.service li{padding:6px 0;color:#45515a;font-size:.9rem}.service li:before{content:"✓";color:var(--teal);font-weight:900;margin-right:8px}
+.tools{background:var(--sage)}
+.tool-grid{display:grid;grid-template-columns:repeat(5,1fr);gap:14px;margin-top:35px}
+.tool{background:#fff;border-radius:17px;padding:19px 13px;text-align:center;border:1px solid rgba(23,50,77,.08);font-weight:700;font-size:.87rem;color:var(--navy)}
+.skills{margin-top:35px;display:flex;flex-wrap:wrap;gap:10px}.pill{background:white;border:1px solid rgba(23,50,77,.12);padding:9px 15px;border-radius:999px;font-size:.85rem;color:var(--navy)}
+.process-grid{display:grid;grid-template-columns:repeat(5,1fr);gap:12px;margin-top:40px}
+.step{padding:23px;border-top:3px solid var(--gold);background:var(--cream);border-radius:0 0 17px 17px}
+.step span{color:var(--gold);font-weight:900;font-size:.8rem}.step h3{font-size:1rem;color:var(--navy);margin:10px 0 6px}.step p{font-size:.84rem;color:var(--muted)}
+.education{background:var(--navy);color:#fff}.education h2{color:white}.education .lead{color:#dce7e9}
+.edu-card{margin-top:35px;padding:30px;border:1px solid rgba(255,255,255,.16);border-radius:25px;background:rgba(255,255,255,.08)}
+.edu-card h3{font-size:1.25rem;margin-bottom:8px}.edu-card p{color:#dce7e9}
+.contact{background:var(--cream);text-align:center}.contact .lead{margin:0 auto 30px}
+.contact-card{max-width:700px;margin:auto;background:white;border-radius:28px;padding:35px;box-shadow:var(--shadow);border:1px solid var(--line)}
+.contact-card .name{font-size:1.7rem;font-weight:900;color:var(--navy)}
+.contact-links{display:flex;justify-content:center;gap:20px;flex-wrap:wrap;margin:20px 0}.contact-links a{color:var(--teal);font-weight:700}
+footer{padding:25px 0;background:#10283c;color:#bfcdd2;text-align:center;font-size:.82rem}
+@media(max-width:850px){
+ .nav-links{display:none}.menu{display:block}.hero-grid,.about-grid{grid-template-columns:1fr}.hero{padding-top:125px}.services-grid{grid-template-columns:1fr}.tool-grid{grid-template-columns:repeat(2,1fr)}.process-grid{grid-template-columns:1fr 1fr}section{padding:75px 0}
+}
+@media(max-width:500px){h1{font-size:3.2rem}.stat-row{grid-template-columns:1fr}.process-grid{grid-template-columns:1fr}.tool-grid{grid-template-columns:1fr 1fr}}
+</style>
+</head>
+<body>
+<nav>
+  <div class="container nav-inner">
+    <a class="logo" href="#home">LJ<span>.</span></a>
+    <div class="nav-links">
+      <a href="#about">About</a><a href="#services">Services</a><a href="#tools">Skills</a><a href="#process">Process</a><a href="#contact">Contact</a>
+    </div>
+    <button class="menu" onclick="document.querySelector('.nav-links').style.display=document.querySelector('.nav-links').style.display==='flex'?'none':'flex'">☰</button>
+  </div>
+</nav>
+
+<header class="hero" id="home">
+  <div class="container hero-grid">
+    <div>
+      <div class="kicker">Freelance Portfolio · Remote Support</div>
+      <h1>Laarni Joy<br><span>Crescencio</span></h1>
+      <p class="hero-text">Administrative Assistant · Transcription & Data Entry Specialist · Virtual Administrative Support</p>
+      <p class="hero-text" style="font-size:.98rem;max-width:600px">I help businesses stay organized, accurate, and moving forward by taking care of the details behind the scenes.</p>
+      <div class="btns">
+        <a class="btn btn-primary" href="#contact">Let's Work Together</a>
+        <a class="btn btn-light" href="#services">Explore Services</a>
+      </div>
+    </div>
+    <div class="hero-card">
+      <div class="initials">LJ</div>
+      <h3>Organize. Simplify. Support.</h3>
+      <p>Reliable remote assistance for administration, data, documentation, and everyday business workflows.</p>
+      <div class="stat-row">
+        <div class="stat"><strong>Admin</strong><small>Support</small></div>
+        <div class="stat"><strong>Data</strong><small>Accuracy</small></div>
+        <div class="stat"><strong>Remote</strong><small>Ready</small></div>
+      </div>
+    </div>
+  </div>
+</header>
+
+<section class="about" id="about">
+  <div class="container about-grid">
+    <div>
+      <div class="section-label">01 / Profile</div>
+      <h2>A calm, organized presence behind the scenes.</h2>
+      <p class="lead">I am a detail-oriented and reliable freelance professional specializing in administrative support, transcription, data entry, and virtual assistance.</p>
+      <br>
+      <p class="lead">With a Bachelor of Science in Mathematics, I bring analytical thinking, numerical accuracy, organization, and problem-solving to every project.</p>
+    </div>
+    <div class="value-box">
+      <div class="value"><b>Accuracy</b><p>Careful handling of data, documents, schedules, and transcription.</p></div>
+      <div class="value"><b>Clarity</b><p>Organized information and straightforward communication.</p></div>
+      <div class="value"><b>Consistency</b><p>Reliable support that fits your existing workflow.</p></div>
+      <div class="value"><b>Adaptability</b><p>Comfortable learning different platforms, processes, and client systems.</p></div>
+    </div>
+  </div>
+</section>
+
+<section id="services">
+  <div class="container">
+    <div class="section-label">02 / Services</div>
+    <h2>Support that fits the way you work.</h2>
+    <p class="lead">From day-to-day administration to data and documentation, I provide practical remote support tailored to your workflow.</p>
+    <div class="services-grid">
+      <article class="service"><div class="num">01</div><h3>Administrative Assistance</h3><p>Keep schedules, communication, documents, and daily operations organized.</p><ul>
+        <li>Calendar & schedule management</li><li>Inbox & email management</li><li>Travel arrangements</li><li>Digital document preparation</li><li>File & information organization</li><li>Administrative coordination</li>
+      </ul></article>
+      <article class="service"><div class="num">02</div><h3>Transcription & Data Entry</h3><p>Turn information into accurate, usable, and well-organized records.</p><ul>
+        <li>Audio & video transcription</li><li>Meeting notes</li><li>High-accuracy typing</li><li>Data entry & database updates</li><li>CRM updates</li><li>Database cleaning</li>
+      </ul></article>
+      <article class="service"><div class="num">03</div><h3>Virtual Administrative Support</h3><p>Flexible remote assistance for recurring tasks and operational workflows.</p><ul>
+        <li>Task coordination</li><li>Digital file organization</li><li>Forms & data management</li><li>Appointment coordination</li><li>Business documentation</li><li>General virtual assistance</li>
+      </ul></article>
+    </div>
+  </div>
+</section>
+
+<section class="tools" id="tools">
+  <div class="container">
+    <div class="section-label">03 / Toolkit</div>
+    <h2>Tools behind modern workflows.</h2>
+    <p class="lead">Familiar with productivity, data, CRM, forms, transcription, and time-tracking platforms.</p>
+    <div class="tool-grid">
+      <div class="tool">Google Workspace</div><div class="tool">Microsoft 365</div><div class="tool">Notion</div><div class="tool">Microsoft Excel</div><div class="tool">Airtable</div>
+      <div class="tool">HubSpot</div><div class="tool">Salesforce</div><div class="tool">Jotform</div><div class="tool">Typeform</div><div class="tool">Fireflies.ai</div>
+      <div class="tool">Fathom</div><div class="tool">Clockify</div><div class="tool">Toggl Track</div>
+    </div>
+    <div class="skills">
+      <span class="pill">Calendar Scheduling</span><span class="pill">Inbox Management</span><span class="pill">Data Entry</span><span class="pill">Transcription</span><span class="pill">Meeting Notes</span><span class="pill">CRM Updates</span><span class="pill">Database Cleaning</span><span class="pill">Document Preparation</span><span class="pill">Task Coordination</span><span class="pill">Spreadsheet Management</span>
+    </div>
+  </div>
+</section>
+
+<section id="process">
+  <div class="container">
+    <div class="section-label">04 / Process</div>
+    <h2>Simple process. Reliable delivery.</h2>
+    <div class="process-grid">
+      <div class="step"><span>01</span><h3>Understand</h3><p>Learn your priorities, requirements, and preferred workflow.</p></div>
+      <div class="step"><span>02</span><h3>Organize</h3><p>Structure tasks, files, schedules, and information.</p></div>
+      <div class="step"><span>03</span><h3>Execute</h3><p>Complete assigned work accurately and efficiently.</p></div>
+      <div class="step"><span>04</span><h3>Review</h3><p>Check details for accuracy and consistency.</p></div>
+      <div class="step"><span>05</span><h3>Deliver</h3><p>Provide organized results and clear communication.</p></div>
+    </div>
+  </div>
+</section>
+
+<section class="education">
+  <div class="container">
+    <div class="section-label" style="color:#e9c98f">05 / Education</div>
+    <h2>Bachelor of Science in Mathematics</h2>
+    <p class="lead">An analytical foundation that supports accuracy, logical reasoning, numerical thinking, and structured problem-solving.</p>
+    <div class="edu-card"><h3>Professional strengths</h3><p>Detail-oriented · Organized · Reliable · Analytical · Time-conscious · Adaptable · Independent</p></div>
+  </div>
+</section>
+
+<section class="contact" id="contact">
+  <div class="container">
+    <div class="section-label">06 / Let's Connect</div>
+    <h2>Ready to make the busywork lighter?</h2>
+    <p class="lead">If you need dependable remote support for administration, transcription, data entry, documentation, or daily workflow management, let's connect.</p>
+    <div class="contact-card">
+      <div class="name">Laarni Joy Crescencio</div>
+      <p style="color:var(--muted);margin-top:7px">Administrative Assistant · Transcription & Data Entry Specialist · Virtual Administrative Support</p>
+      <div class="contact-links">
+        <a href="tel:+639603136926">+63 960 313 6926</a>
+        <a href="https://www.linkedin.com/in/laarni-joy-crescencio-838346289/" target="_blank" rel="noopener">LinkedIn Profile ↗</a>
+      </div>
+      <a class="btn btn-primary" href="mailto:?subject=Freelance%20Work%20Inquiry%20for%20Laarni%20Joy%20Crescencio">Contact Me</a>
+    </div>
+  </div>
+</section>
+
+<footer>© 2026 Laarni Joy Crescencio · Freelance Administrative & Virtual Support</footer>
+</body>
+</html>
